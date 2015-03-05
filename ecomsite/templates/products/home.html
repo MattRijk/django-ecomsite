@@ -1,18 +1,17 @@
 {% extends "base.html" %}
-
+{# this is a comment #}
 {% block head_title %}
 Welcome to 
 {% endblock %}
 
-{% block head_styles %}
-<style>
+{% block styles %}
 .jumbotron {
-
-    color: purple;
-    
+   color:purple;
 }
+{% endblock %}
 
-</style>
+{% block jquery %}
+//alert("welcome!");
 {% endblock %}
 
 
