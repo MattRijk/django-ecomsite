@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Product(models.Model):
     title = models.CharField(max_length=120, null=False, blank=False)
@@ -12,4 +13,7 @@ class Product(models.Model):
     
     
     def __unicode__(self):
-        return self.title
+        return str(self.title)
+    
+    def get_price(self):
+        return self.price
