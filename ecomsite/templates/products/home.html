@@ -14,8 +14,8 @@ Welcome to
 //alert("welcome!");
 {% endblock %}
 
-
-{% block content %}
+{% block jumbotron2 %}
+<div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
@@ -25,6 +25,22 @@ Welcome to
         <p>
           <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Explore Site &raquo;</a>
         </p>
-      </div>
+      </div> 
+      
+</div>  
 
+{% endblock %}
+
+{% block content %}
+
+      
+     
+  <div class ='row'>
+  <div class='col-sm-12'>
+  {% for product in products %}
+  {{product.title}}
+  {% endfor %}
+  </div>
+  </div>
+	
 {% endblock %}
