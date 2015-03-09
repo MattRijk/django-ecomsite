@@ -36,11 +36,28 @@ Welcome to
       
      
   <div class ='row'>
-  <div class='col-sm-12'>
-  {% for product in products %}
-  {{product.title}}
+
+ {% for product in products %}
+		  <div class='col-sm-4'>
+		 
+		  {% for item in product.productimage_set.all %}
+		  
+		  {% if item.featured %}
+		  <img src="{{ MEDIA_URL }}{{ item.image }}" />
+		  {% endif %}
+		  
+		  
+		  {% endfor %}
+		  {{ product.id}}
+		  {{ product.title }}
+		  {{ product.price }}
+		  
+		  
+		   </div>
+   
+  {% cycle "" "" "</div><br/><hr/><div class='row'>" %}
   {% endfor %}
-  </div>
+
   </div>
 	
 {% endblock %}
